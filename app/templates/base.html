@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="/home">Home</a> |
+        <a href="/quero-adotar">Quero Adotar</a>
+    </nav>
+
+    {% block conteudo %}
+    {%endblock%}
+</body>
+</html>

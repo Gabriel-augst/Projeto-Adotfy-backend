@@ -1,0 +1,2 @@
+FLASK_APP=adotfy.py
+FLASK_ENV=development
