@@ -15,11 +15,3 @@ def infoAnimal(id):
 
     return infoDoAnimal
 
-#print(buscarNomesAnimais())
-#print(infoAnimal(1))
-
-
-"""
-SELECT A.nome, A.idade, A.sexo, A.tipo, D.nome, D.cidade, D.estado, D.telefone, D.email FROM animal A INNER JOIN doante D ON A.idDoante = D.idDoante WHERE A.idAnimal = ?;
-
-"""
