@@ -9,7 +9,7 @@ def home():
 
 @app.route('/quero-adotar')
 def quero_adotar():
-    listaDeAdocao = buscarNomesAnimais()
+    listaDeAdocao = buscarAnimais()
     return render_template('quero-adotar.html', lista = listaDeAdocao)
 
 @app.route('/info-animal/<int:idAnimal>')
