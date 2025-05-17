@@ -2,17 +2,18 @@
 
 {% block conteudo %}
 
-<h2>{{info[0]}}</h2>
+<h2>{{info.animal.nome}}</h2>
+<img src="{{ url_for('static', filename='images/imagem-animal-1.jpg') }}" alt="Imagem animal {{id}}">
 <p>
-    {{info[1]}} anos | {{info[2]}} | {{info[3]}}
+    {{info.animal.idade}} anos | {{info.animal.sexo}} | {{info.animal.tipo}}
 </p>
 <p>
     Caso queira adotar entre em contato com o Doante <br>
-    Doante: {{info[4]}} <br>
-    {{info[5]}}, {{info[6]}} <br> <br>
+    Doante: {{info.doante.nome}} <br>
+    {{info.doante.cidade}}, {{info.doante.estado}} <br> <br>
     Informações para contato: <br>
-    telefone: {{info[7]}} <br>
-    email: {{info[8]}}
+    telefone: {{info.doante.telefone}} <br>
+    email: {{info.doante.email}}
 </p>
 
 <a href="{{ url_for('quero_adotar') }}">

@@ -15,4 +15,4 @@ def quero_adotar():
 @app.route('/info-animal/<int:idAnimal>')
 def info_do_animal(idAnimal):
     informacoesAdocao = infoAnimal(idAnimal)
-    return render_template('info-animal.html', info = informacoesAdocao)
+    return render_template('info-animal.html', info = informacoesAdocao, id = idAnimal)

@@ -1,5 +1,5 @@
 import sqlite3
-from classModels import Animal, Doante, Adocao
+from app.models.classModels import Animal, Doante, Adocao
 
 conn = sqlite3.connect("adocao.db", check_same_thread=False)
 cur = conn.cursor()
@@ -30,6 +30,8 @@ def infoAnimal(idAnimal):
 
     return infoAdocao
 
+
+"""
 info = infoAnimal(3)
 print(f'Nome: {info.animal.nome}')
 print(f'Idade: {info.animal.idade}')
@@ -41,7 +43,6 @@ print(f'Estado: {info.doante.estado}')
 print(f'Telefone: {info.doante.telefone}')
 print(f'Email: {info.doante.email}')
 
-"""
 listaAdocao = buscarAnimais()
 for itemAdocao in listaAdocao:
     print(f'id: {itemAdocao.animal.idAnimal}')
